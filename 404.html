@@ -10,8 +10,20 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
     <title>QA Community</title>
-    <script type="module" crossorigin src="/Community/assets/index-DoxJrj6e.js"></script>
-    <link rel="stylesheet" crossorigin href="/Community/assets/index-BzKrA4W2.css">
+    <script>
+      (function () {
+        try {
+          var m = localStorage.getItem('qa-theme');
+          var dark =
+            m === 'dark' ||
+            (m !== 'light' &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/Community/assets/index-CcJFnyW-.js"></script>
+    <link rel="stylesheet" crossorigin href="/Community/assets/index-BiYcAp4G.css">
   </head>
   <body>
     <div id="root"></div>
